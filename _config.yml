@@ -1,0 +1,10 @@
+# Site settings
+title: George Mayorga
+email: email@georgemayorga.com
+description: "Programming is the most transformative language of our time, shaping the way we move, communicate and think."
+baseurl: ""
+url: "http://georgemayorga.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
