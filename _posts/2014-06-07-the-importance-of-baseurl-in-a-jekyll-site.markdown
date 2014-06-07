@@ -8,6 +8,7 @@ categories: jekyll update
 <h1>{{ page.title }}</h1>
 <p class="meta">{{ page.date | date: "%b %-d, %Y" }}</p>
 </header>
+<article class="post-content">
 <p>The first thing to share is the lesson learned while launching this blog using [Jekyll][Jekyll]. 
 After installing the gem, building the site, and getting it up and running on localhost I was ready to push my site to the gh-pages branch I made for it. When I did this I ran into a problem.
 </p>
@@ -19,4 +20,4 @@ I asked someone with Jekyll experience and a fresh set of eyes to look at the is
 </p>
 [Jekyll]: http://jekyllrb.com
 [here]: http://jekyllrub.com/docs/github-pages/#project-page-url-structure
-
+</article>
