@@ -4,9 +4,10 @@ title:  "The Importance of 'baseurl' in a Jekyll Site"
 date:   2014-06-06
 categories: jekyll update
 ---
+<header class="post-header">
 <h1>{{ page.title }}</h1>
-{{ page.date}}
-
+<p class="meta">{{ page.date}}</p>
+</header>
 The first thing to share is the lesson learned while launching this blog using [Jekyll][Jekyll]. 
 After installing the gem, building the site, and getting it up and running on localhost I was ready to push my site to the gh-pages branch I made for it. When I did this I ran into a problem.
 
