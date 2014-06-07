@@ -5,7 +5,8 @@ date:   2014-06-06
 categories: jekyll update
 ---
 
-The first thing to share is the lesson learned while launching this blog using [Jekyll][Jekyll]. After installing the gem, building the site, and getting it up and running on localhost I was ready to push my site to the gh-pages branch I made for it. When I did this I ran into a problem.
+The first thing to share is the lesson learned while launching this blog using [Jekyll][Jekyll]. 
+After installing the gem, building the site, and getting it up and running on localhost I was ready to push my site to the gh-pages branch I made for it. When I did this I ran into a problem.
 
 My index.html page was not accessing the CSS file, and what was showing up looked nothing like my website. On top of that, the links to my posts were leading to 404 errors. I googled, looked at the documentation but no luck.
 
