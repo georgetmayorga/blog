@@ -12,7 +12,7 @@ categories: terminal
 
 <article class="post-content">
 <p>
-There is an easy way to improve your git to github workflow. When making new repo's or interacting with Github you'll often get a prompt that looks something like this:
+There is an easy way to improve your git to github workflow. When making new repo's or interacting with Github in Terminal, you'll often get a prompt that looks something like this:
 
 {% highlight ruby%}
 Github username:
@@ -20,7 +20,7 @@ Github password:
 {% endhighlight %}
 </p>
 <p>
-You're pushing your files via 'https' which is the Github default. By changing this process to run using 'SSH Keys' you can stop the annoying prompt and speed up your workflow significantly. Also avoiding the awkward moments when someone you're working with has to look away from your screen so you can put in your password.
+You're pushing your files to Github via 'https' which is the Github default. By changing this process to run using 'SSH Keys' you can stop the annoying prompt and speed up your workflow. No one will have to look away from your sscreen as you type in your Github password again.
 </p>
 <p>
 Check out the link for step by step <a href="https://help.github.com/articles/generating-ssh-keys">instructions</a>.
