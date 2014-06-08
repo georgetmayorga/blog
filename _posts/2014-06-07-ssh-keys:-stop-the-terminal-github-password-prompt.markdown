@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "SSH Keys: Stop the Terminal 'Github Password' Prompt"
+title: "SSH Keys: Stopping 'Github Password' Prompt"
 date: 2014-06-08
 categories: terminal
 ---
