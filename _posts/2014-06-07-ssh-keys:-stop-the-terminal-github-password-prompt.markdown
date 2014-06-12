@@ -20,8 +20,7 @@ Github password:
 {% endhighlight %}
 </p>
 <p>
-You're pushing your files to Github via 'https' which is the Github default. By changing this process to run using 'SSH Keys' you can stop the annoying prompt and speed up your workflow. No one will have to look away from your sscreen as you type in your Github password again.
-</p>
+You're pushing your files to Github via 'https' which is the Github default. By changing this process to run using 'SSH Keys' you can stop the annoying prompt and speed up your workflow./p>
 <p>
 Check out the link for step by step <a href="https://help.github.com/articles/generating-ssh-keys">instructions</a>.
 </p>
