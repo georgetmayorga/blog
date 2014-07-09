@@ -22,12 +22,12 @@ you can send and receive emails from their system.
 </p>
 <p>
 Set up your <a href="https://sendgrid.com/developer/reply">host and url info</a> for your Sendgrid account. You're host info will be
-<code>sendgrid-username.bymail.in</code> and url info should be <code>http://yourhostedsite.com/email_processor</code>.
+{% highlight ruby %}sendgrid-username.bymail.in{% endhighlight %} and url info should be {% highlight ruby %}http://yourhostedsite.com/email_processor{% endhighlight %}.
 <i>Note: I used <a href="https://ngrok.com/">ngrok</a> to host the my rails server and make it available to receive email in this 
 dummy app the mess around with Griddler.</i>
 </p>
 <p>
-At this point, if you send an email to <code>anything@sendgrid-username.bymail.in</code> your app will receive a JSON post request. For all
+At this point, if you send an email to {% highlight ruby %}anything@sendgrid-username.bymail.in{% endhighlight %} your app will receive a JSON post request. For all
 the steps on what to do next Griddler does have some good <a href="https://github.com/thoughtbot/griddler">documentation</a> for what to do get the routes set up, and what you can do with that email once it hits your app. If you want to check to see if the email is getting POSTed to your app, then take a look at the rails server logs.
 </p>
 </article>
