@@ -12,7 +12,7 @@ categories: griddler
 
 <article class="post-content">
 <p>
-Here are some of the guidelines I wish i found when installing the Griddler gem for parsing emails.
+Here are some of the guidelines I wish I found when installing the Griddler gem for parsing emails.
 </p>
 
 <p>
@@ -36,7 +36,7 @@ dummy app to mess around with Griddler.</i>
 <p>
 At this point, if you send an email to
 <b>
-anything@sendgrid-username.bymail.in
+this-could-be-anything@sendgrid-username.bymail.in
 </b>
 your app will receive a JSON post request. For all
 the steps on what to do next Griddler does have some good <a href="https://github.com/thoughtbot/griddler">documentation</a> for what to do get the routes set up, and what you can do with that email once it hits your app. If you want to check to see if the email is getting POSTed to your app, then take a look at the rails server logs.
