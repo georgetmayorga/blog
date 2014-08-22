@@ -1,8 +1,6 @@
 ---
-layout: default
-title: "Parsing Emails with Griddler"
-date: 2014-07-09
-categories: griddler
+layout: post
+title: Parsing Emails with Griddler
 ---
 
 Here are some of the guidelines I wish I found when installing the Griddler gem for parsing emails.
