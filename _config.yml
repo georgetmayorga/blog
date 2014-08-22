@@ -2,7 +2,7 @@
 title: George Mayorga
 email: email@georgemayorga.com
 description: "Programming is the most transformative language of our time, shaping the way we move, communicate and think."
-baseurl: "/georgetmayorga.github.io/blog"
+baseurl: "/blog/"
 url: "http://georgetmayorga.github.io/blog"
 # Build settings
 markdown: kramdown
