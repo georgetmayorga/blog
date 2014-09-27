@@ -20,11 +20,12 @@ Here's my test:
 
         sign_in_as user
 
-        expect(page).to have_text "Location: Cambridge, Massachusetts"
+        expect(page).to have_text 
+          "Location: Cambridge, Massachusetts"
       end
     end
 
-I'm asserting that I'll have `Cambridge, Massachussetts` on printed on the page.
+I'm asserting that I'll have `Cambridge, Massachussetts` printed on the page.
 There are 2 parts to this process: setting, and lookup.
 
 ## Setting
@@ -69,8 +70,34 @@ Now that we've changed the IP address for `development` and `test` we're ready t
 
 In `app/controllers/sessions_controller.rb` when we call `current_user.save` this invokes
 the `after_validation :geocode` which pulls the `ip_address` column from the current user
-and sets the `latitude` and `longitude` fields in the database. Now what if we want to look up
-a users location to show them?
+and sets the `latitude` and `longitude` fields in the database. It does this by making
+and external HTTP request that we need to sub (because we've turned on Webmock to disallow
+HTTP requests). Here's how we configured [webmock](https://github.com/bblimke/webmock):
+
+    # spec/spec_helper.rb
+
+    require 'webmock/rspec'
+    WebMock.disable_net_connect!(allow_localhost: true)
+
+    RSpec.configure do |config|
+      config.before(:each) do
+        stub_request(:get, "http://freegeoip.net/json/76.24.18.47").
+          with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
+          to_return(:status => 200, :body => '{"ip":"76.24.18.47","country_code":"US","
+            country_name":"United States","region_code":"MA","region_name":"Massachusetts",
+            "city":"Cambridge","zipcode":"02138","latitude":42.38,"longitude":-71.1329,
+            "metro_code":"506","area_code":"617"}', :headers => {})
+      end
+    end
+
+You can see that we're stubbing a `get` request to `"http://freegeoip.net/json/76.24.18.47"`,
+which contains the IP address we fed it. The other thing you can see is the `:body` key
+is pointing to a value that is a `json` response. Geocode gives is a cool command line
+helper to get the response we need to stub. By typing `geocode -j 'you-search-term'`
+you can get the `json` hash your app would get, allowing you to succesfully stub it. We passed it
+our IP address to make sure it will stub the information our test expects.
+
+Now what if we want to look up a users location to show them?
 
 ## Lookup
 Now that I have the information in the database, I want to pull it and show it on a users
