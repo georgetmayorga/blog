@@ -20,7 +20,7 @@ Here's my test:
 
         sign_in_as user
 
-        expect(page).to have_text 
+        expect(page).to have_text
           "Location: Cambridge, Massachusetts"
       end
     end
@@ -82,11 +82,22 @@ HTTP requests). Here's how we configured [webmock](https://github.com/bblimke/we
     RSpec.configure do |config|
       config.before(:each) do
         stub_request(:get, "http://freegeoip.net/json/76.24.18.47").
-          with(:headers => {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
-          to_return(:status => 200, :body => '{"ip":"76.24.18.47","country_code":"US","
-            country_name":"United States","region_code":"MA","region_name":"Massachusetts",
-            "city":"Cambridge","zipcode":"02138","latitude":42.38,"longitude":-71.1329,
-            "metro_code":"506","area_code":"617"}', :headers => {})
+          with(:headers => {'Accept'=>'*/*',
+            'User-Agent'=>'Ruby'}).
+          to_return(:status => 200,
+            :body => '{
+              "ip":"76.24.18.47",
+              "country_code":"US",
+              "country_name":"United States",
+              "region_code":"MA",
+              "region_name":"Massachusetts",
+              "city":"Cambridge",
+              "zipcode":"02138",
+              "latitude":42.38,
+              "longitude":-71.1329,
+              "metro_code":"506",
+              "area_code":"617"}',
+            :headers => {})
       end
     end
 
@@ -119,5 +130,5 @@ VERY simple. Let's see what `location` looks like for `current_user`.
       result.city + ", " + result.state
     end
 
-Passing the `Geocoder.search` function our IP address will give us a [Geocoder::Result](https://github.com/alexreisner/geocoder#advanced-geocoding) object. We know that object responds to `.city` and `.state` and add some formatting. 
+Passing the `Geocoder.search` function our IP address will give us a [Geocoder::Result](https://github.com/alexreisner/geocoder#advanced-geocoding) object. We know that object responds to `.city` and `.state` and add some formatting.
 With this set up our tests run green and we're good to go!
