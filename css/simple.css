@@ -4,7 +4,8 @@
 }
 
 body {
-  background: white;
+  background: black;
+  color: white;
   font-family: monospace;
   padding-top: 25%;
 }
@@ -14,9 +15,9 @@ body {
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: black;
+  color: white;
 }
 
 p {
-  padding-bottom: 2px;
+  padding-bottom: 15px;
 }
