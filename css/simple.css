@@ -4,8 +4,9 @@
 }
 
 body {
-  background: #ecf0f1;
+  background: chocolate;
   font-family: monospace;
+  padding-top: 25%;
 }
 .container {
   margin: 0 auto;
