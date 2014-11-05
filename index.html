@@ -1,37 +1,22 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Developer</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content=>
+    <link rel="canonical" href="/blog/">
+    <link rel="stylesheet" href="/blog/css/simple.css">
+  </head>
 
-<div class="home">
-
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <!---<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  -->
-  <div> 
-  <h1>Selected Projects</h1>
-  <p><a href="http://pkg.cat" target=_blank>PKG.CAT</a></p>
-  <img src="{{ site.url }}/assets/pkgcat.png" width="450">
-  <p>PKG.CAT is an app that lets people bundle together a collection of links, attachments, and information about themselves to share. A great use case would be a speaker at a conference who wants to bundle their slides, some articles, and a bit about themselves into an email.</p>
-  <p><i>Gems used: Paperclip, Griddler, AWS, Bourbon, Neat</i></p>
-
-  <p><a href="https://twitter.com/grgmyrg" target=_blank>George-Bot</a></p>
-  <img src="{{ site.url }}/assets/twitter.png" width="450">
-  <p>I use twitter to find a lot of information and follow some great accounts, but never used it to tweet. I was also interested in learning the Twitter API. With that in mind, I built a twitter-bot that retweets accounts I follow every hour on the :40. Here's the <a href="https://github.com/georgetmayorga/twitter-bot/blob/master/lib/tasks/retweet.rake#L1-L4" target=_blank>simple rake task</a> that gets it done.
-  <p><i>Gems used: Twitter</i></p>
-
-  <p><a href="http://enigmatic-gorge-9543.herokuapp.com/" target=_blank>Craigstr</a></p>
-    <img src="{{ site.url }}/assets/craigstr.png" width="450">
-    <p>Built a Craigslist-esque site in a few of days with a couple of friends. Check out my <a href="https://github.com/cgruppioni/craigstr/commits/master?author=georgetmayorga" target=_blank>commits on Github</a>.</p>
-    <p><i>Gems used: Monban, Kaminari, Gretel, Bourbon, Neat, Bitters </i></p>
-  </div>
-</div>
+  <body>
+    <div class="container">
+      <p>I like opinionated software, and am working on ideas for decentralized 
+      web apps and network systems to support them.</p>
+      <p>Right now I'm building things in Meteor and Rails.</p>
+      <p>You can <a href="mailto:email@georgemayorga.com">email me</a> or 
+      <a href="http://twitter.com/grgmyrg">follow my bot</a> to see some of my interests.
+    </div>
+  </body>
+</html>
