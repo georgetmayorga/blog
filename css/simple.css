@@ -12,3 +12,11 @@ body {
   margin: 0 auto;
   width: 50%;
 }
+
+a:link, a:visited, a:hover, a:active {
+  color: black;
+}
+
+p {
+  padding-bottom: 2px;
+}
