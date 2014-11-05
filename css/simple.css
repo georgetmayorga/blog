@@ -5,6 +5,7 @@
 
 body {
   background: #ecf0f1;
+  font-family: monospace;
 }
 .container {
   margin: 0 auto;
